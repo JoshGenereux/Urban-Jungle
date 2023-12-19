@@ -6,9 +6,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { show, hide } from '../../redux/slices/landingModalSlice';
 
 const Landing = () => {
+  const modalIsShowing = useSelector((state) => state.landingModal.showModal);
+
   return (
     <div className={styles.landing}>
-      <Welcome />
+      {modalIsShowing && <Welcome />}
+      <div></div>
     </div>
   );
 };
