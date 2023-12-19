@@ -1,0 +1,29 @@
+.welcome {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.header {
+  font-size: 75px;
+  margin-top: 75px;
+  text-align: center;
+  font-family: 'Vibes';
+  font-weight: bold;
+}
+
+.moto {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Courgette';
+}
+
+.start {
+  width: 150px;
+  height: 35px;
+  font-size: 20px;
+  font-family: 'Courgette';
+}

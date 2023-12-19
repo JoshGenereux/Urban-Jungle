@@ -1,7 +1,12 @@
-import './App.css';
+import './App.scss';
+import Landing from './components/landing/Landing';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Landing />
+    </div>
+  );
 }
 
 export default App;
