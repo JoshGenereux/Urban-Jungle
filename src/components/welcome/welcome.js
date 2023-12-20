@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import styles from './welcome.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { show, hide } from '../../redux/slices/landingModalSlice';
+import { toggleheader } from '../../redux/slices/landingHeaderSlice';
 
 const Welcome = () => {
-  const modalIsShowing = useSelector((state) => state.landingModal.showModal);
   const dispatch = useDispatch();
 
   const handleModal = () => {
     dispatch(hide());
+    dispatch(toggleheader());
   };
 
   return (

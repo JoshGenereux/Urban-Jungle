@@ -1,6 +1,6 @@
 .welcome {
   width: 600px;
-  height: 500px;
+  height: 600px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -9,7 +9,7 @@
 
 .header {
   font-size: 75px;
-  margin-top: 75px;
+  margin-top: auto;
   text-align: center;
   font-family: 'Vibes';
   font-weight: bold;
@@ -22,8 +22,17 @@
 }
 
 .start {
-  width: 150px;
+  width: auto;
   height: 35px;
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Courgette';
+  color: white;
+  border: none;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

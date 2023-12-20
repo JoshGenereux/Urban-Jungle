@@ -7,11 +7,12 @@ import { show, hide } from '../../redux/slices/landingModalSlice';
 
 const Landing = () => {
   const modalIsShowing = useSelector((state) => state.landingModal.showModal);
+  const showHeader = useSelector((state) => state.landingHeader.showHeader);
 
   return (
     <div className={styles.landing}>
       {modalIsShowing && <Welcome />}
-      <div></div>
+      {showHeader && <Header />}
     </div>
   );
 };
