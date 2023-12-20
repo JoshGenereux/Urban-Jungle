@@ -11,8 +11,8 @@ const Landing = () => {
 
   return (
     <div className={styles.landing}>
+      <Header />
       {modalIsShowing && <Welcome />}
-      {showHeader && <Header />}
     </div>
   );
 };
