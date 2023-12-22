@@ -11,8 +11,11 @@ const Landing = () => {
 
   return (
     <div className={styles.landing}>
-      <Header />
-      {modalIsShowing && <Welcome />}
+      <div className={styles.upperContainer}>
+        <div className={styles.left}></div>
+        <div className={styles.right}></div>
+      </div>
+      <div className={styles.footer}></div>
     </div>
   );
 };

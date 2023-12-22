@@ -11,10 +11,6 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.urban}>Urban Jungle</div>
       <div></div>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <input className={styles.input} />
-        <button className={styles.search}>search</button>
-      </form>
     </div>
   );
 };
