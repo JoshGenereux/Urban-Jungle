@@ -1,19 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './landing.module.scss';
-import Header from '../header/Header';
 import Welcome from '../welcome/welcome';
-import { useSelector, useDispatch } from 'react-redux';
-import { show, hide } from '../../redux/slices/landingModalSlice';
+import axios from 'axios';
+
+const URL = 'http://localhost:5432';
 
 const Landing = () => {
-  const modalIsShowing = useSelector((state) => state.landingModal.showModal);
-  const showHeader = useSelector((state) => state.landingHeader.showHeader);
+  // useEffect(() => {
+
+  //   getAllPLants();
+  // }, []);
+
+  const getAllPLants = async () => {
+    try {
+      const response = await axios.get(`${URL}/api/getAll`);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className={styles.landing}>
       <div className={styles.upperContainer}>
-        <div className={styles.left}></div>
-        <div className={styles.right}></div>
+        <div className={styles.left}>
+          <div className={styles.header} onClick={getAllPLants}>
+            Urban Jungle
+          </div>
+          <div></div>
+        </div>
+        <div className={styles.right}>
+          <Welcome />
+        </div>
       </div>
       <div className={styles.footer}></div>
     </div>

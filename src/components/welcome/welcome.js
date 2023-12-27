@@ -1,27 +1,18 @@
 import React, { useEffect } from 'react';
 import styles from './welcome.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
-import { show, hide } from '../../redux/slices/landingModalSlice';
-import { toggleheader } from '../../redux/slices/landingHeaderSlice';
 
 const Welcome = () => {
   const dispatch = useDispatch();
 
-  const handleModal = () => {
-    dispatch(hide());
-    dispatch(toggleheader());
-  };
-
   return (
     <div className={styles.welcome}>
-      <div className={styles.header}>Urban Jungle</div>
-      <div className={styles.moto}>
-        Explore Nature's Tapestry. Dive into the Lush World of Plants, Discover
-        Their Secrets, and Cultivate Your Green Oasis. Knowledge Grows Here!
+      <div className={styles.urban}>Urban Jungle</div>
+      <div className={styles.mainText}>Plant Name</div>
+      <div className={styles.infoText}>
+        Sample text here to show what it will look like. Im not sure how much
+        info there will be but I guess we will see
       </div>
-      <button className={styles.start} onClick={handleModal}>
-        Get Started
-      </button>
     </div>
   );
 };
